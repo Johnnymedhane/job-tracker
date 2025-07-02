@@ -1,0 +1,91 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Frontend Developer",
+      "company": "Company A",
+      "website": "www.companyA.com",
+      "connection": "John (LinkedIn)",
+      "activityLog": "Sent resume on 04/01/2023",
+      "mustHave": [
+        true,
+        true,
+        false
+      ],
+      "niceToHave": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "2",
+      "title": "QA Engineer",
+      "company": "Company B",
+      "website": "www.companyB.com",
+      "connection": "Jane (Referral)",
+      "activityLog": "Followed up on 04/02/2023",
+      "mustHave": [
+        true,
+        false,
+        true
+      ],
+      "niceToHave": [
+        3,
+        5,
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "id": "45fe",
+      "title": "try",
+      "company": "lemo",
+      "website": "Add Job",
+      "connection": "tal",
+      "activityLog": "trynew",
+      "mustHave": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "niceToHave": [
+        null,
+        "edbb",
+        "edbb",
+        "edbb",
+        "edbb"
+      ]
+    },
+    {
+      "id": "b933",
+      "title": "try",
+      "company": "again",
+      "website": "fortsy.com",
+      "connection": "daba",
+      "activityLog": "trying",
+      "mustHave": [
+        true,
+        false,
+        false
+      ],
+      "niceToHave": []
+    }
+  ],
+  "mustHave": [
+    {
+      "id": "9f52",
+      "criteria": "a good culture and free speech"
+    }
+  ],
+  "niceToHave": [
+    {
+      "id": "edbb",
+      "criteria": "skills"
+    }
+  ]
+}
