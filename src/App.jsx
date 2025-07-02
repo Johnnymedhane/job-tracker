@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import Login from "./pages/loginPage";
 
 
+import ProtectedRoute from "./components/ProtectedRoutes.jsx";
 import { JobsProvider } from "./contexts/JobsContexts";
 import MustHaveCriteria from "./components/mustHaveCriteria";
 import NiceToHaveCriteria from "./components/NiceToHaveCriteria";
@@ -15,7 +16,6 @@ import AddJobForm from "./components/AddJobForm";
 import { AddJobProvider } from "./contexts/addJobContexts";
 import EditJobForm from "./components/EditJobForm";
 import AuthenticationPage from "./pages/AuthenticationPage";
-import ProtectedRoute from "./components/ProtectedRoutes.jsx";
 import Signup from "./pages/SignUpPage.jsx";
 
 
