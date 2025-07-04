@@ -15,7 +15,7 @@ function JobList() {
   function handleAddJob() {
     setIsBlure(true);
       setTimeout(() => {
-        navigate("/app/jobForm");
+        navigate("/criterion");
         setIsBlure(false);
       }, 500);
   }

@@ -24,8 +24,8 @@ function Criterion() {
             </nav>
                 <Outlet />
             </div>
-            <Link to="/app" className="btn-criterion">
-                <Button >Finish &rarr; </Button>
+            <Link to="/app/jobForm" className="btn-criterion">
+                <Button >Next &rarr; </Button>
             </Link>
             
         </div>
