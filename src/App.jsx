@@ -5,6 +5,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import JobsPage from "./pages/AppLayout";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/loginPage";
+import AuthenticationPage from "./pages/AuthenticationPage";
 
 
 import ProtectedRoute from "./components/ProtectedRoutes.jsx";
@@ -15,9 +16,7 @@ import JobList from "./components/JobList";
 import AddJobForm from "./components/AddJobForm";
 import { AddJobProvider } from "./contexts/addJobContexts";
 import EditJobForm from "./components/EditJobForm";
-import AuthenticationPage from "./pages/AuthenticationPage";
-import Signup from "./pages/SignUpPage.jsx";
-
+import Signup from "./pages/SignupPage.jsx";
 
 function App() {
     
