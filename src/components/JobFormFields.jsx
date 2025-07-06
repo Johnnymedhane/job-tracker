@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { useJobs } from "../contexts/JobsContexts";
 import Button from "./Button";
 import { useAddJobContext } from "../contexts/addJobContexts";
+import Loading from "./Loading";
 
 function JobFormFields({
     title,
@@ -63,8 +64,10 @@ function JobFormFields({
     
   }
 
-    return (
-        <form onSubmit={handleSubmit} className="add-job-form">
+  if (isLoading) return <Loading />;
+
+  return (
+    <form onSubmit={handleSubmit} className="add-job-form">
       {error && <p className="error-message">{error}</p>}
       {!error && successMessage &&
         <div className="success-message">

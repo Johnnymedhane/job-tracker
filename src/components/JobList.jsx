@@ -12,27 +12,27 @@ function JobList() {
   const{ isBlure, setIsBlure } = useAddJobContext();
   const navigate = useNavigate();
 
+  
+    const {
+      jobs,
+      loading,
+      mustHaveCriteria,
+      niceToHaveCriteria,
+      error
+    } = useJobs();
+   
   function handleAddJob() {
     setIsBlure(true);
       setTimeout(() => {
-        navigate("/criterion");
+        navigate(mustHaveCriteria.length === 0 || niceToHaveCriteria.length === 0 ? "/criterion" : "/app/jobForm");
         setIsBlure(false);
       }, 500);
   }
 
 
 
-  const {
-    jobs,
-    loading,
-    mustHaveCriteria,
-    niceToHaveCriteria,
-    error
-  } = useJobs();
- 
-
   if (loading) return <Loading />;
-  if (error) return <div>Error fetching jobs</div>;
+  if (error) return <div className="error">Error fetching jobs</div>;
 
   return (
     <div className="job-list">
