@@ -2,12 +2,14 @@ import { Link, NavLink, Outlet } from "react-router-dom"
 
 import Button from "../components/Button"
 import Navbar from "../components/Navbar"
+import { useJobs } from "../contexts/JobsContexts";
 
 function Criterion() {
    
     
+    const { mustHaveCriteria, niceToHaveCriteria, jobs } = useJobs();
+    const navigateTo = mustHaveCriteria.length > 0 && niceToHaveCriteria.length > 0 ? jobs.length > 0 ? "/app" : "/app/jobForm" : "/criterion";
 
-    
     return (
         <div className="criterion">
             <Navbar />
@@ -24,7 +26,7 @@ function Criterion() {
             </nav>
                 <Outlet />
             </div>
-            <Link to="/app/jobForm" className="btn-criterion">
+            <Link to={navigateTo} className="btn-criterion">
                 <Button >Next &rarr; </Button>
             </Link>
             

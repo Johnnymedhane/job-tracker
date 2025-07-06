@@ -45,7 +45,7 @@ function JobList() {
 
      {(mustHaveCriteria.length > 0 || niceToHaveCriteria.length > 0 ) && <div className='defined-criterion'>
         <div className='must-have-criteria'>
-          <h3>Must Have Criteria</h3>
+          <h3>Must Have Criteria you defined.</h3>
           <ul>
             {mustHaveCriteria.map((criterion) => (
               <li key={criterion.id}>{criterion.criteria}</li>
@@ -54,7 +54,7 @@ function JobList() {
         </div>
 
         <div className='nice-to-have-criteria'>
-          <h3>Nice To Have Criteria</h3>
+          <h3>Nice To Have Criteria you defined.</h3>
           <ul>
             {niceToHaveCriteria.map((criterion) => (
               <li key={criterion.id}>{criterion.criteria}</li>

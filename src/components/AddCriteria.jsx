@@ -61,7 +61,7 @@ function AddCriteria({criteriaType, callFunction}) {
 
 
     return (
-        <div className="criteria-create">
+       
            
            <div className="criteria-input">
            <input ref={inputRef}
@@ -70,11 +70,11 @@ function AddCriteria({criteriaType, callFunction}) {
                onChange={(e) => setInput(e.target.value)}
                placeholder="Add a your own criterion"
            />
-            <Button onClick={handleAdd}>
+            <button onClick={handleAdd}>
                 Add Criterion
-            </Button>
+            </button>
             </div>
-        </div>
+       
     )
 }
 

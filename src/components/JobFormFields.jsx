@@ -105,7 +105,7 @@ function JobFormFields({
               </div>
 
           <h3>Must Have Criteria</h3>
-          <ul>
+          <ul className="criteria-list">
             {mustHaveCriteria.map((c) => (
               <li key={c.id}>
                 <label>
@@ -121,7 +121,7 @@ function JobFormFields({
           </ul>
 
           <h3>Nice to Have Criteria (rank from 1 to 5)</h3>
-          <ul>
+          <ul className="criteria-list">
             {niceToHaveCriteria.map((c) => (
               <li key={c.id}>
                 <label> {c.criteria}

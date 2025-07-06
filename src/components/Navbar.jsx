@@ -2,6 +2,18 @@ import { useState } from "react";
 import {  NavLink, useNavigate } from "react-router-dom";
 import Button from "./Button";
 
+
+
+const appNavigation = [
+  {"name": "Criterion", "path": "/criterion"},
+  {"name": "Job List", "path": "/app/jobList"},
+  {"name": "Job Form", "path": "/app/jobForm"}
+];
+const authNavigation = [
+  {"name": "Home", "path": "/"},
+  {"name": "Login", "path": "/auth/login"},
+  {"name": "Sign Up", "path": "/auth/signup"}
+];
 function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +21,7 @@ function Header() {
     const navigate = useNavigate();
     // const user = JSON.parse(localStorage.getItem("user"));
     const isAuthenticated = localStorage.getItem("auth") === "true";
-
+   
 
 
     function handleLogout() {
@@ -33,17 +45,23 @@ function Header() {
                     <ul>
           {!isAuthenticated && (
             <>
-              <li><NavLink to="/">Home</NavLink></li>
-              <li><NavLink to="/auth/login">Login</NavLink></li>
-              <li><NavLink to="/auth/signup">Sign Up</NavLink></li>
+              {authNavigation.map((navItem) => (
+                <li key={navItem.name}
+                onClick={() => setIsOpen(false)}>
+                  <NavLink to={navItem.path}>{navItem.name}</NavLink>
+                </li>
+              ))}
             </>
           )}
 
           {isAuthenticated && (
             <>
-              <li><NavLink to="/criterion">Criteria</NavLink></li>
-              <li><NavLink to="/app/jobList">Job List</NavLink></li>
-              <li><NavLink to="/app/jobForm">Add Job</NavLink></li>
+              {appNavigation.map((navItem) => (
+                <li key={navItem.name}
+                onClick={() => setIsOpen(false)}>
+                  <NavLink to={navItem.path}>{navItem.name}</NavLink>
+                </li>
+              ))}
               <li><button onClick={handleLogout}>Logout</button></li>
             </>
           )}
